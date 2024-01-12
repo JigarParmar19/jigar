@@ -1,0 +1,40 @@
+#one{
+    display: flex;
+}
+
+.aek{
+      background-color: antiquewhite;
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+}
+
+.be{
+    background-color: rgb(203, 230, 230);
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+}
+
+.tan{
+    background-color: rgb(224, 224, 174);
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+}
+
+.char{
+      background-color: bisque;
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+}
+
+.flx{
+     display:flex;
+    p{color:red}
+}

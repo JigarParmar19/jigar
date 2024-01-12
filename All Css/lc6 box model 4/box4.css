@@ -1,0 +1,54 @@
+#one{
+    display: flex;
+}
+
+.aek{
+      background-color: antiquewhite;
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+   
+     #but{
+        padding-inline: 90px;
+     }
+}
+
+.be{
+    background-color: rgb(203, 230, 230);
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+
+    #kan{
+            padding-inline: 70px;
+    }
+}
+
+.tan{
+    background-color: rgb(224, 224, 174);
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+
+    #aee{
+           padding-inline: 80px;
+
+    }
+}
+
+.char{
+      background-color: rgb(190, 209, 236);
+    border: 3px solid black;
+    height: fit-content;
+    width: fit-content;
+    margin: 5px;
+
+    #bee{
+        padding-inline: 90px ;
+    }
+
+}
+
