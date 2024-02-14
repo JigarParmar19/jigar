@@ -21,7 +21,7 @@
 }
 
 .navbar-detail:hover {
-    color: aqua;
+    color: rgb(58, 194, 194);
 }
 
 .fas {
@@ -189,6 +189,10 @@ img{
     cursor: pointer;
     margin: 3px;
 
+}
+
+button:hover{
+      background-color: rgb(36, 159, 220);
 }
 
  /* futar */
