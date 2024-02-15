@@ -5,35 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+
+#men{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+   text-decoration: none;
+}
+
+
+.book {
+    background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+
+
+
+  position: relative;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+
+</style>
 <body>
-      <h1>HTMLL</h1>  
-    <a href="/All Html/lc1 tag.html/">lecture 1</a><br>
-    <a href="/All Html/lc2 my data.html/">lecture 2</a><br>
-    <a href="/All Html/lc3 make like this.html/">lecture 3</a><br>
-    <a href="/All Html/lc4 tebal.html/">lecture 4</a><br>
-    <a href="/All Html/lc5 Form.html/">lecture 5</a><br>
-    <a href="/All Html/pr.html/about.html/">Projet</a><br>
-    <a href="/All Html/pr1.html/pj1.html">Projet 1</a><br>
-    <br>
-    <br>
-    <h1>CSS</h1>
-    <a href="/All Css/lc1 css intro/lc1.html">lecture 1</a><br>
-    <a href="/All Css/lc2 css text/lc2.html">lecture 2</a><br>
-    <a href="/All Css/lc3 css background/lc3.html">lecture 3</a><br>
-    <a href="/All Css/lc4 box model 1/lc4.html">Box model 1</a><br>
-    <a href="/All Css/lc5 box model 2/lc5.html">Box model 2</a><br>
-    <a href="/All Css/lc6 box model 3/box3.html">Box model 3</a><br>
-    <a href="/All Css/lc6 box model 4/box4.html">Box model 4</a><br>
-    <a href="/All Css/lc7 Pr/pr1.html">Projet</a><br>
-    <a href="/All Css/lc8 test/index.html">Test</a><br>
-    <a href="/All Css/lc9 hover and transform/lc 9.html">Hover</a><br>
-    <a href="/All Css/lc10 position/lc10.html">position</a><br>
-    <a href="/All Css/lc11 live pr/index.html">live pr</a><br>
-    <a href="/All Css/pr 1/index.html">test</a>
-    <br>
-    <br>
-    <h1>jquery</h1>
-    <a href="/jquery/lc 1 event/lc1.html">event</a>
+
+    <div id="men">
+      <div class="book">
+        <ul>
+        <p> <li><a href="/All Html/lc1 tag.html/">lecture 1</a><br></li>
+            <li><a href="/All Html/lc2 my data.html/">lecture 2</a><br></li>
+            <li><a href="/All Html/lc3 make like this.html/">lecture 3</a><br></li>
+            <li><a href="/All Html/lc4 tebal.html/">lecture 4</a><br></li>
+            <li><a href="/All Html/lc5 Form.html/">lecture 5</a><br></li>
+            <li><a href="/All Html/pr.html/about.html/">Projet</a><br></li>
+            <li><a href="/All Html/pr1.html/pj1.html">Projet 1</a><br></li>
+        </p>
+    </ul>
+        <div class="cover">
+            <p>HTML</p>
+        </div>
+       </div>
+     <br>
+     <br>
+     <div class="book">
+        <ul>
+        <p>
+          <li><a href="/All Css/lc1 css intro/lc1.html">lecture 1</a><br></li>
+         <li><a href="/All Css/lc2 css text/lc2.html">lecture 2</a><br></li>
+         <li><a href="/All Css/lc3 css background/lc3.html">lecture 3</a><br></li>
+         <li><a href="/All Css/lc4 box model 1/lc4.html">Box model 1</a><br></li>
+        <li><a href="/All Css/lc5 box model 2/lc5.html">Box model 2</a><br></li>
+         <li><a href="/All Css/lc6 box model 3/box3.html">Box model 3</a><br></li>
+        <li><a href="/All Css/lc6 box model 4/box4.html">Box model 4</a><br></li>
+         <li><a href="/All Css/lc7 Pr/pr1.html">Projet</a><br></li>
+         <li><a href="/All Css/lc8 test/index.html">Test</a><br></li>
+         <li><a href="/All Css/lc9 hover and transform/lc 9.html">Hover</a><br></li>
+         <li><a href="/All Css/lc10 position/lc10.html">position</a><br></li>
+         <li><a href="/All Css/lc11 live pr/index.html">live pr</a><br></li>
+         <li><a href="/All Css/pr 1/index.html">test</a></li>
+        </p>
+    </ul>
+        <div class="cover">
+            <p>Css</p>
+        </div>
+       </div>          
+     <br>
+     <br>
+     <div class="book">
+        <ul>
+        <p>    
+           <li><a href="/jquery/lc 1 event/lc1.html">Event</a></li> 
+        </p>
+    </ul>
+        <div class="cover">
+            <p>Jquery</p>
+        </div>
+       </div>
+
+    </div>
+   
+
+    
 </body>
 </html>
 
