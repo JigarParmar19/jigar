@@ -1,29 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="JS	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <style>
-
-#men{
+  #men {
     margin-top: 150px;
     display: flex;
     justify-content: space-evenly;
-}
+  }
 
-a{
-   text-decoration: none;
-}
-
-
-.book {
-    background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  a {
+    text-decoration: none;
+  }
 
 
+  .book {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
+
+
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+  }
+
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+
+  .myCard {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+  }
+
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  }
+
+  .backSide {
+    transform: rotateY(180deg);
+  }
+
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0.3;
+    }
+  }
+/* 
+new */
+
+.book1 {
+  background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+
+
+  margin-left: 80px;
   position: relative;
   border-radius: 10px;
   width: 220px;
@@ -48,7 +211,8 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%
   color: #000;
 }
 
-.cover {
+.cover1 {
+  margin-left: 0px;
   top: 0;
   position: absolute;
   background-color: lightgray;
@@ -74,7 +238,7 @@ background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%
   justify-content: center;
 }
 
-.book:hover .cover {
+.book1:hover .cover1 {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: rotatey(-80deg);
@@ -87,176 +251,105 @@ p {
   font-weight: bolder;
 }
 
-               
-.myCard {
-  background-color: transparent;
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-}
-
-.title {
-  font-size: 1.5em;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-}
-
-.innerCard {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-
-.myCard:hover .innerCard {
-  transform: rotateY(180deg);
-}
-
-.frontSide,
-.backSide {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 1rem;
-  color: white;
-  box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
-  font-weight: 700;
-}
-
-.frontSide,
-.frontSide::before {
-  background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
-}
-
-.backSide,
-.backSide::before {
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-
-.backSide {
-  transform: rotateY(180deg);
-}
-
-.frontSide::before,
-.backSide::before {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: '';
-  width: 110%;
-  height: 110%;
-  position: absolute;
-  z-index: -1;
-  border-radius: 1em;
-  filter: blur(20px);
-  animation: animate 5s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0.3;
-  }
-
-  80% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.3;
-  }
-}
+/* new end */
 
 </style>
+
 <body>
 
-    <div id="men">
-      <div class="book">
-        <ul>
-        <p> <li><a href="/All Html/lc1 tag.html/">lecture 1</a><br></li>
-            <li><a href="/All Html/lc2 my data.html/">lecture 2</a><br></li>
-            <li><a href="/All Html/lc3 make like this.html/">lecture 3</a><br></li>
-            <li><a href="/All Html/lc4 tebal.html/">lecture 4</a><br></li>
-            <li><a href="/All Html/lc5 Form.html/">lecture 5</a><br></li>
-            <li><a href="/All Html/pr.html/about.html/">Projet</a><br></li>
-            <li><a href="/All Html/pr1.html/pj1.html">Projet 1</a><br></li>
-        </p>
-    </ul>
-        <div class="cover">
-            <p>HTML</p>
-        </div>
-       </div>
-     <br>
-     <br>
-     <div class="book">
-        <ul>
+  <div id="men">
+    <div class="book">
+      <ul>
         <p>
+          <li><a href="/All Html/lc1 tag.html/">lecture 1</a><br></li>
+          <li><a href="/All Html/lc2 my data.html/">lecture 2</a><br></li>
+          <li><a href="/All Html/lc3 make like this.html/">lecture 3</a><br></li>
+          <li><a href="/All Html/lc4 tebal.html/">lecture 4</a><br></li>
+          <li><a href="/All Html/lc5 Form.html/">lecture 5</a><br></li>
+          <li><a href="/All Html/pr.html/about.html/">Projet</a><br></li>
+          <li><a href="/All Html/pr1.html/pj1.html">Projet 1</a><br></li>
+        </p>
+      </ul>
+      <div class="cover">
+        <p>HTML</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="book">
+      <ul>
+        <p class="">
           <li><a href="/All Css/lc1 css intro/lc1.html">lecture 1</a><br></li>
-         <li><a href="/All Css/lc2 css text/lc2.html">lecture 2</a><br></li>
-         <li><a href="/All Css/lc3 css background/lc3.html">lecture 3</a><br></li>
-         <li><a href="/All Css/lc4 box model 1/lc4.html">Box model 1</a><br></li>
-        <li><a href="/All Css/lc5 box model 2/lc5.html">Box model 2</a><br></li>
-         <li><a href="/All Css/lc6 box model 3/box3.html">Box model 3</a><br></li>
-        <li><a href="/All Css/lc6 box model 4/box4.html">Box model 4</a><br></li>
-         <li><a href="/All Css/lc7 Pr/pr1.html">Projet</a><br></li>
-         <li><a href="/All Css/lc8 test/index.html">Test</a><br></li>
-         <li><a href="/All Css/lc9 hover and transform/lc 9.html">Hover</a><br></li>
-         <li><a href="/All Css/lc10 position/lc10.html">position</a><br></li>
-         <li><a href="/All Css/lc11 live pr/index.html">live pr</a><br></li>
-         <li><a href="/All Css/pr 1/index.html">test</a></li>
+          <li><a href="/All Css/lc2 css text/lc2.html">lecture 2</a><br></li>
+          <li><a href="/All Css/lc3 css background/lc3.html">lecture 3</a><br></li>
+          <li><a href="/All Css/lc4 box model 1/lc4.html">Box model 1</a><br></li>
+          <li><a href="/All Css/lc5 box model 2/lc5.html">Box model 2</a><br></li>
+          <li><a href="/All Css/lc6 box model 3/box3.html">Box model 3</a><br></li>
+          <li><a href="/All Css/lc6 box model 4/box4.html">Box model 4</a><br></li>
+          <li><a href="/All Css/lc7 Pr/pr1.html">Projet</a><br></li>
+          <li><a href="/All Css/lc8 test/index.html">Test</a><br></li>
+          <li><a href="/All Css/lc9 hover and transform/lc 9.html">Hover</a><br></li>
+          <li><a href="/All Css/lc10 position/lc10.html">position</a><br></li>
+          <li><a href="/All Css/lc11 live pr/index.html">live pr</a><br></li>
+          <li><a href="/All Css/pr 1/index.html">test</a></li>
         </p>
-    </ul>
-        <div class="cover">
-            <p>Css</p>
-        </div>
-       </div>          
-     <br>
-     <br>
-     <div class="book">
-        <ul>
-        <p>    
-           <li><a href="/jquery/lc 1 event/lc1.html">Evetnt</a></li>
-           <li><a href="/jquery/lc2 exam/index.html">Exam</a></li>
+      </ul>
+      <div class="cover">
+        <p>Css</p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="book">
+      <ul>
+        <p>
+          <li><a href="/jquery/lc 1 event/lc1.html">Evetnt</a></li>
+          <li><a href="/jquery/lc2 exam/index.html">Exam</a></li>
         </p>
-    </ul>
-        <div class="cover">
-            <p>Jquery</p>
-        </div>
-       </div>
-
-      
-       <div class="book">
-        <ul>
-          <p>
-            <li><a href="./PR/index.html">PR</a></li>
-          </p>
-        </ul>
-        <div class="cover">
-          <p>PR</p>
-         </div>
-       </div> 
-
+      </ul>
+      <div class="cover">
+        <p>Jquery</p>
+      </div>
     </div>
 
-    </div>
-    
-   
+    <br>
+    <br>
+    <br>
 
-    
+    <div class="book">
+      <ul>
+        <p>
+          <li><a href="./PR/index.html">PR</a></li>
+        </p>
+      </ul>
+      <div class="cover">
+        <p>PR</p>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+ 
+  <br>
+  <br>
+  <br>
+
+<!-- 2nd row -->
+
+  <div class="book1">
+    <ul>
+    <p>
+      <li><a href="./JavaScript/lc1">Lc1</a></li>
+    </p>
+   </ul>
+    <div class="cover1">
+        <p>Java Script</p>
+    </div>
+   </div>
+
+
+
 </body>
+
 </html>
-
-
-
-
-
