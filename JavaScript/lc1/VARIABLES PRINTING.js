@@ -1,7 +1,7 @@
-var Number=10
+let Number=10
 
-console.log("Print the value stored in the variable number:",Number)
+console.log(Number)
 
-var Number=20
+Number=20
 
-console.log("Print the value stored in the variable number:",Number)
+console.log(Number)
