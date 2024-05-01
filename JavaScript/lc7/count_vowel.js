@@ -1,0 +1,1 @@
+console.log("red and white".length); 
