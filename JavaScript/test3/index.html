@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Account Creation</title>
+<style>
+    form {
+        width: 400px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    #balance {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h2>Create a Bank Account</h2>
+<form id="Form">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+    
+    <label for="accountNumber">Account Number:</label>
+    <input type="number" id="accountNumber" name="accountNumber" required>
+
+    <label for="accountEmail">Email:</label>
+    <input type="text" id="Email" name="Email" required>    
+
+    <button type="submit">Create Account</button>
+</form>
+
+<div id="depositDiv" style="display:none;">
+    <h2>Deposit Amount</h2>
+    <label for="depositAmount">Amount to Deposit:</label>
+    <input type="number" id="depositAmount" name="depositAmount" required>
+    <button onclick="deposit()">Deposit</button>
+</div>
+
+<div id="withdrawDiv" style="display:none;">
+    <h2>Withdraw Amount</h2>
+    <label for="withdrawAmount">Amount to Withdraw:</label>
+    <input type="number" id="withdrawAmount" name="withdrawAmount" required>
+    <button onclick="withdraw()">Withdraw</button>
+</div>
+
+<div id="balance" style="display:none;">Bank Balance: $<span id="balanceAmount">0</span></div>
+
+<script>
+    var accountData = {};
+
+    document.getElementById("Form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var fullName = document.getElementById("fullName").value;
+        var accountNumber = document.getElementById("accountNumber").value;
+        var Email = document.getElementById("Email").value;
+        accountData = {
+            fullName: fullName,
+            accountNumber: accountNumber,
+            Email: Email,
+            balance: 0 
+        };
+        console.log("Bank Account Data:", accountData);
+        document.getElementById("Form").style.display = "none"; 
+        document.getElementById("depositDiv").style.display = "block"; 
+        document.getElementById("withdrawDiv").style.display = "block"; 
+        document.getElementById("balance").style.display = "block"; 
+        document.getElementById("balanceAmount").textContent = accountData.balance.toFixed(2); 
+        history.pushState(accountData, null, "?balance=" + accountData.balance); 
+    });
+
+    function deposit() {
+        var depositAmount = parseFloat(document.getElementById("depositAmount").value);
+        if (!isNaN(depositAmount) && depositAmount > 0) {
+            accountData.balance += depositAmount;
+            document.getElementById("balanceAmount").textContent = accountData.balance.toFixed(2);
+            history.pushState(accountData, null, "?balance=" + accountData.balance); 
+        }
+    }
+
+    function withdraw() {
+        var withdrawAmount = parseFloat(document.getElementById("withdrawAmount").value);
+        if (!isNaN(withdrawAmount) && withdrawAmount > 0 && withdrawAmount <= accountData.balance) {
+            accountData.balance -= withdrawAmount;
+            document.getElementById("balanceAmount").textContent = accountData.balance.toFixed(2);
+            history.pushState(accountData, null, "?balance=" + accountData.balance); 
+        }
+    }
+
+    window.onpopstate = function(event) {
+        if (event.state) {
+            accountData = event.state;
+            document.getElementById("balanceAmount").textContent = accountData.balance.toFixed(2);
+        }
+    };
+</script>
+</body>
+</html>
