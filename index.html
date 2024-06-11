@@ -90,230 +90,152 @@
   }
 
 
-  .myCard {
-    background-color: transparent;
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-  }
-
-  .title {
-    font-size: 1.5em;
-    font-weight: 900;
-    text-align: center;
-    margin: 0;
-  }
-
-  .innerCard {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-
-  .myCard:hover .innerCard {
-    transform: rotateY(180deg);
-  }
-
-  .frontSide,
-  .backSide {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 1rem;
-    color: white;
-    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
-    font-weight: 700;
-  }
-
-  .frontSide,
-  .frontSide::before {
-    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
-  }
-
-  .backSide,
-  .backSide::before {
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  }
-
-  .backSide {
-    transform: rotateY(180deg);
-  }
-
-  .frontSide::before,
-  .backSide::before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: '';
-    width: 110%;
-    height: 110%;
-    position: absolute;
-    z-index: -1;
-    border-radius: 1em;
-    filter: blur(20px);
-    animation: animate 5s linear infinite;
-  }
-
-  @keyframes animate {
-    0% {
-      opacity: 0.3;
-    }
-
-    80% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0.3;
-    }
-  }
-
   /* 
 new */
 
-  /* .book1 {
-  background: rgb(34, 193, 195);
+  #men2 {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+  .book1 {
+    background: rgb(34, 193, 195);
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
 
-  margin-left: 80px;
-  position: relative;
-  border-radius: 10px;
-  width: 220px;
-  height: 300px;
-  background-color: whitesmoke;
-  -webkit-box-shadow: 1px 1px 12px #000;
-  box-shadow: 1px 1px 12px #000;
-  -webkit-transform: preserve-3d;
-  -ms-transform: preserve-3d;
-  transform: preserve-3d;
-  -webkit-perspective: 2000px;
-  perspective: 2000px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: #000;
-}
+    margin-left: 80px;
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+  }
 
-.cover1 {
-  margin-left: 0px;
-  top: 0;
-  position: absolute;
-  background-color: lightgray;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform-origin: 0;
-  -ms-transform-origin: 0;
-  transform-origin: 0;
-  -webkit-box-shadow: 1px 1px 12px #000;
-  box-shadow: 1px 1px 12px #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
+  .cover1 {
+    margin-left: 0px;
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 
-.book1:hover .cover1 {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: rotatey(-80deg);
-  -ms-transform: rotatey(-80deg);
-  transform: rotatey(-80deg);
-}
+  .book1:hover .cover1 {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
 
-p {
-  font-size: 20px;
-  font-weight: bolder;
-} */
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+  }
 
 
-.card {
-            --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
-            width: 190px;
-            height: 254px;
-            padding: 5px;
-            border-radius: 1rem;
-            overflow: visible;
-            background: #f7ba2b;
-            background: var(--background);
-            position: relative;
-            z-index: 1;
-        }
+  .card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 190px;
+    height: 254px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+  }
 
-        .card::after {
-            position: absolute;
-            content: "";
-            top: 30px;
-            left: 0;
-            right: 0;
-            z-index: -1;
-            height: 100%;
-            width: 100%;
-            transform: scale(0.8);
-            filter: blur(25px);
-            background: #f7ba2b;
-            background: var(--background);
-            transition: opacity .5s;
-        }
+  .card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+  }
 
-        .card-info {
-            --color: #181818;
-            background: var(--color);
-            color: var(--color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-            border-radius: .7rem;
-        }
+  .card-info {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+  }
 
-        .card .title {
-            font-weight: bold;
-            letter-spacing: .1em;
-        }
+  .card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+  }
 
-        /*Hover*/
-        .card:hover::after {
-            opacity: 0;
-        }
+  /*Hover*/
+  .card:hover::after {
+    opacity: 0;
+  }
 
-        .card:hover .card-info {
-            color: #f7ba2b;
-            transition: color 1s;
-        }
+  .card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+  }
 
-        a{
-            margin-right: 50px;
-            color: wheat;
-        }
+  a {
+    margin-right: 50px;
+    color: wheat;
+  }
 
 
   /* new end */
@@ -391,45 +313,50 @@ p {
       </div>
     </div>
 
-  </div>
 
-  </div>
 
-  <br>
-  <br>
-  <br>
+    <!-- 2nd row -->
+    <br>
+    <br>
 
-  <!-- 2nd row -->
 
-  <!-- <div class="book1">
-    <ul>
-    <p>
-      <li><a href="./JavaScript/lc1">Lc1</a></li>
-      <li><a href="/JavaScript/lc2">Lc2</a></li>
-    </p>
-   </ul>
-    <div class="cover1">
-        <p>Java Script</p>
-    </div>
-   </div> -->
-
-  <div class="card">
-    <div class="card-info">
+    <div class="book">
       <ul>
-        <li><a href="/JavaScript/lc1">lc1</a></li>
-        <li><a href="/JavaScript/lc2">lc2</a></li>
-        <li><a href="/JavaScript/lc3">lc3</a></li>
-        <li><a href="/JavaScript/lc4">lc4</a></li>
-        <li><a href="/JavaScript/lc5">lc5</a></li>
-        <li><a href="/JavaScript/lc6">lc6</a></li>
-        <li><a href="/JavaScript/lc7">lc7</a></li>
-        <li><a href="/JavaScript/test/test.html">test</a></li>
-        <li><a href="/JavaScript/ludo/index.html">ludo</a></li>
+        <p>
+          <li><a href="./JavaScript/lc1">Lc1</a></li>
+          <li><a href="/JavaScript/lc2">Lc2</a></li>
+          <li><a href="./JavaScript/lc3">Lc3</a></li>
+          <li><a href="./JavaScript/lc6">Lc6</a></li>
+          <li><a href="./JavaScript/lc7">Lc7</a></li>
+          <li><a href="./JavaScript/ludo/index.html">Ludo</a></li>
+          <li><a href="./JavaScript/from/index.html">From</a></li>
+          <li><a href="./JavaScript/quiz/index.html">Quiz</a></li>
+        </p>
       </ul>
+      <div class="cover">
+        <p>Java Script</p>
+      </div>
     </div>
+
+    <br>
+    <br>
+
+    <div class="book">
+      <ul>
+        <p>
+          <li><a href="./JavaScript/test/test.html">Test1</a></li>
+          <li><a href="./JavaScript/test2/index.html">Test2</a></li>
+          <li><a href="./JavaScript/test3/index.html">Test3</a></li>
+          <li><a href="./JavaScript/app/index.html">Test4</a></li>
+          <li><a href="./JavaScript/test5/index.html">Test5</a></li>
+        </p>
+      </ul>
+      <div class="cover">
+        <p>Java Test</p>
+      </div>
+    </div>
+
   </div>
-
-
 
 </body>
 
