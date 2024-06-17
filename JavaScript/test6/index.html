@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .header {
+            background-color: #FFD700;
+            color: black;
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .bookmark-button {
+            background-color: #FF0000;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 4px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Library Management System</h2>
+        <form id="bookForm">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" required>
+
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" name="authorName" required>
+
+            <label for="bookDescription">Book Description:</label>
+            <textarea id="bookDescription" name="bookDescription" required></textarea>
+
+            <label for="addingDate">Adding Date:</label>
+            <input type="date" id="addingDate" name="addingDate" required>
+
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="Love">Love</option>
+                <option value="Horror">Horror</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Romance">Romance</option>
+            </select>
+
+            <label for="bookPrice">Book's Price:</label>
+            <input type="text" id="bookPrice" name="bookPrice" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    <br>
+    <br>
+
+    </div>
+       
+          
+        <table id="booksTable" border="1">
+            <thead>
+                <tr class="header">
+                    <th>Book Name</th>
+                    <th>Author Name</th>
+                    <th>Description</th>
+                    <th>Adding Date</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="booksTableBody">
+            </tbody>
+        </table>
+
+</body>
+<script src="./index.js"></script>
+</html>
