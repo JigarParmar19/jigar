@@ -1,157 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            width: 350px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-        .header {
-            background-color: #FFD700;
-            color: black;
-            font-weight: bold;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 8px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            border-radius: 4px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .bookmark-button {
-            background-color: #FF0000;
-            color: white;
-            padding: 8px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            border-radius: 4px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<style>
+    #nav {
+        background-color: rgb(78, 202, 186);
+
+    }
+
+    #from {
+        text-align: center;
+        font-size: 25px;
+        display: block;
+    }
+
+    input{
+        
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        margin-left: 800px;
+    }
+
+    #category{
+               width: 310px;
+    }
+
+  #date{
+    width: 290px;
+  }
+
+    button{
+        margin: 10px;
+    }
+</style>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" id="nav">
+            <!-- <a class="navbar-brand" href="">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Dashbord.html">Dashbord</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Mybook.html">Mybook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="logout" href="../Mybookmark.html">Mybookmark</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div class="container">
-        <h2>Library Management System</h2>
-        <form id="bookForm">
-            <label for="bookName">Book Name:</label>
-            <input type="text" id="bookName" name="bookName" required>
+    <form id="from">
+        <h2>Library Management</h2>
 
-            <label for="authorName">Author Name:</label>
-            <input type="text" id="authorName" name="authorName" required>
+        <!-- <label for="Bookname">Bookname:</label> -->
+        <input type="text" id="Bookname" placeholder="bookname" required>
 
-            <label for="bookDescription">Book Description:</label>
-            <textarea id="bookDescription" name="bookDescription" required></textarea>
+        <!-- <label for="autorname">autorname</label> -->
+        <input type="text" id="autorname" placeholder="enter autorname" required>
 
-            <label for="addingDate">Adding Date:</label>
-            <input type="date" id="addingDate" name="addingDate" required>
+        <!-- <label for="description">description</label> -->
+        <input type="text" id="description" placeholder="enter description" required>
 
-            <label for="category">Select Category:</label>
-            <select id="category" name="category" required>
-                <option value="">Select Category</option>
-                <option value="Love">Love</option>
-                <option value="Horror">Horror</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Romance">Romance</option>
-            </select>
+        <!-- <label for="date">date</label> -->
+        <input type="date" id="date" placeholder="enter date" required>
 
-            <label for="bookPrice">Book's Price:</label>
-            <input type="text" id="bookPrice" name="bookPrice" required>
+        <!-- <label for="number">price</label> -->
+        <input type="number" id="payasa" placeholder="enter book price" required>
 
-            <input type="submit" value="Submit">
-        </form>
-    <br>
-    <br>
-
-    </div>
-       
-          
-        <table id="booksTable" border="1">
-            <thead>
-                <tr class="header">
-                    <th>Book Name</th>
-                    <th>Author Name</th>
-                    <th>Description</th>
-                    <th>Adding Date</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody id="booksTableBody">
-            </tbody>
-        </table>
+        <!-- <label for="category">Select Category:</label> -->
+        <select id="category" name="category" required>
+            <option value="">Select Category</option>
+            <option value="Love">Love</option>
+            <option value="Horror">Horror</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Romance">Romance</option>
+        </select>
+           <br>
+        <button id="submit">Sumbit</button>
+    </form>
 
 </body>
-<script src="./index.js"></script>
+      <script type="module" src="../index.js"></script>
 </html>
